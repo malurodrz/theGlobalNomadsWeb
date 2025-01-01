@@ -1,0 +1,62 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 148px;
+  padding-bottom: 80px;
+  //align-items: center;
+
+  .header-container-title {
+    padding-bottom: 32px;
+    color: #545454;
+    text-align: center;
+    font-family: "Neue Haas Grotesk Display Pro", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 28.8px */
+    letter-spacing: -0.48px;
+  }
+
+  .header-container-subtitle {
+    padding-bottom: 80px;
+    color: #0F0F0F;
+    text-align: center;
+    font-family: "Albra Text TRIAL", serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 76.8px */
+    letter-spacing: -1.28px;
+  }
+
+  .header-container-button {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Neue Haas Grotesk Display Pro", serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    letter-spacing: -0.4px;
+
+    button {
+      border-radius: 8px;
+      border: 1px solid #C6C6C6;
+      background-color: white;
+      height: 64px;
+      padding: 20px 32px;
+    }
+    button:hover {
+      border-radius: 8px;
+      background: #0EAAA1;
+      color: white;
+    }
+    button.active {
+      border-radius: 8px;
+      background: #0EAAA1;
+      color: white;
+    }
+  }
+}

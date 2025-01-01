@@ -1,0 +1,41 @@
+.carousel-title{
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "Albra Text TRIAL", serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 48px */
+  letter-spacing: -0.8px;
+}
+
+.carousel-card-text{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+
+  .carousel-card-title{
+    color: #000;
+    font-family: "Albra Text TRIAL", serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -0.64px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .carousel-card-subtitle{
+    color: #545454;
+    font-family: "Neue Haas Grotesk Display Pro", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 28.8px */
+    letter-spacing: -0.48px;
+    margin: 0;
+    padding: 0;
+  }
+}

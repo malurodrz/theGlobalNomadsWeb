@@ -1,0 +1,44 @@
+.menu {
+  z-index: 1; /* Para controlar a sobreposição */
+  position: absolute; /* Fixa a div sobre a div1 */
+  top: 0;
+  left: 0;
+  width: 100%; /* Garante a mesma largura */
+  height: 100%; /* Herda a altura da div1 */
+}
+.container-app {
+  position: relative; /* Define o contexto de posicionamento */
+}
+
+.conteudo {
+  position: relative; /* Pode ser relative ou static */
+  width: 100%; /* Ajusta para ocupar toda a largura */
+  height: auto; /* Ajusta para acompanhar o conteúdo */
+  z-index: 1; /* Para controlar a sobreposição */
+}
+
+.nav-menu {
+  position: absolute; /* Fixa a div sobre a div1 */
+  top: 0;
+  left: 0;
+  //width: 100%; /* Garante a mesma largura */
+  height: 100%; /* Herda a altura da div1 */
+  z-index: 2; /* Div 2 ficará acima da Div 1 */
+  .control {
+    display: flex;
+    flex-direction: row !important;
+    gap: 36px!important;
+    padding-top: 80px!important;
+    padding-right: 104px;
+    z-index: 9999;
+    padding-left: 36px;
+    height: 100%; /* Herda a altura da div1 */
+
+    .vertical-line{
+      background-color: black;
+      width: 1px;
+      z-index: 9999;
+      height: 99%; /* Herda a altura da div1 */
+    }
+  }
+}

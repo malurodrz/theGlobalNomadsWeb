@@ -1,0 +1,91 @@
+.footer-container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 48px;
+  padding-top: 100px;
+  .container-header {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    .header-infos {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      .header-infos-links {
+        display: flex;
+        gap: 100px;
+        width: 384px;
+        text-align: start;
+        h1{
+          margin: 0;
+          padding-bottom: 24px;
+          color: #919191;
+          font-family: "Neue Haas Grotesk Display Pro", serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 19.2px */
+        }
+        p{
+          margin: 0;
+          gap: 12px;
+          display: flex;
+          align-items: baseline;
+          color: #545454;
+          font-family: "Neue Haas Grotesk Display Pro", serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 28.8px */
+          letter-spacing: -0.48px;
+        }
+      }
+      .header-infos-virtuoso {
+        width: 176px;
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        p{
+          color: #919191;
+          font-family: "Neue Haas Grotesk Display Pro", serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%; /* 16.8px */
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+
+.footer-container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 84px;
+  background-color: white;
+
+  .container-footer {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+
+    p {
+      color: #1E1E1E;
+      text-align: center;
+      font-family: "Neue Haas Grotesk Display Pro", serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      margin: 0;
+    }
+  }
+}

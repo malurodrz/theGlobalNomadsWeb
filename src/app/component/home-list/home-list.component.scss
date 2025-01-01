@@ -1,0 +1,42 @@
+.hotel-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+
+  .hotel-item {
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: baseline;
+    gap: 32px;
+
+    &:hover {
+      background-color: #ededed;
+    }
+
+    .hotel-name {
+      color: #0F0F0F;
+      font-family: "Albra Text TRIAL", serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 120%; /* 48px */
+      letter-spacing: -0.8px;
+      padding-left: 104px;
+      padding-bottom: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .hotel-location {
+      color: #919191;
+      font-family: "Albra Text TRIAL", serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 120%; /* 38.4px */
+      letter-spacing: -0.64px;
+    }
+  }
+}

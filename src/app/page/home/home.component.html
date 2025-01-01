@@ -1,0 +1,7 @@
+<app-header (selectedTab)="changeTab($event)"></app-header>
+<app-home-map *ngIf="selectedTab == 'map'"></app-home-map>
+<app-home-gallery *ngIf="selectedTab == 'gallery'"></app-home-gallery>
+<app-home-list *ngIf="selectedTab == 'list'"></app-home-list>
+
+<app-footer></app-footer>
+

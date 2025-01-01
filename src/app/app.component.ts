@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'theGlobalNomadsWeb';
+  title = 'The Global Nomads';
+
+  protected open: boolean = false;
+
+  openMenu() {
+    this.open = true;
+  }
+
+  closeMenu() {
+    this.open = false; // Fecha o modal
+  }
+
 }

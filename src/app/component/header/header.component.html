@@ -1,0 +1,17 @@
+<div class="header-container">
+  <div class="header-container-title">
+    <p>
+      {{ title }}
+    </p>
+  </div>
+  <div class="header-container-subtitle">
+    <p>
+      {{ subtitle }}
+    </p>
+  </div>
+  <div class="header-container-button" *ngIf="showbutton">
+    <button (click)="changeTab('map')" [ngClass]="activeTab =='map' ? 'active': null">MAPA</button>
+    <button (click)="changeTab('gallery')" [ngClass]="activeTab =='gallery' ? 'active': null">GALERIA</button>
+    <button (click)="changeTab('list')" [ngClass]="activeTab =='list' ? 'active': null">LISTA</button>
+  </div>
+</div>
