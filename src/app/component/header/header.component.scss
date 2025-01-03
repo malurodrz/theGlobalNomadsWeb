@@ -3,30 +3,34 @@
   flex-direction: column;
   padding-top: 148px;
   padding-bottom: 80px;
-  //align-items: center;
 
   .header-container-title {
     padding-bottom: 32px;
-    color: #545454;
     text-align: center;
-    font-family: "Neue Haas Grotesk Display Pro", serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%; /* 28.8px */
-    letter-spacing: -0.48px;
+
+    p{
+      font-family: "Neue Haas Grotesk Display Pro", serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 28.8px */
+      letter-spacing: -0.48px;
+    }
   }
 
   .header-container-subtitle {
     padding-bottom: 80px;
     color: #0F0F0F;
     text-align: center;
-    font-family: "Albra Text TRIAL", serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 120%; /* 76.8px */
-    letter-spacing: -1.28px;
+
+    p{
+      font-size: 48px;
+      font-family: "Albra Text TRIAL", serif;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 120%; /* 76.8px */
+      letter-spacing: -1.28px;
+    }
   }
 
   .header-container-button {

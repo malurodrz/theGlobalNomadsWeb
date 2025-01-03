@@ -1,1 +1,18 @@
-<p>impress works!</p>
+<div class="impress-header-container">
+  <div class="container impress-header-container-text">
+    <p class="impress-header-container-text-title">Imprensa</p>
+    <h1 class="impress-header-container-text-subtitle">O que a mídia fala sobre nós</h1>
+  </div>
+
+  <div class="container impress-header-container-cards">
+    <div class="impress-header-container-card" *ngFor="let image of images">
+      <img [src]="image.src" [alt]="image.title" />
+      <div class="impress-header-container-card-text">
+        <h1 class="text-ellipsis impress-header-container-card-text-title">{{ image.title }}</h1>
+        <p class="text-ellipsis impress-header-container-card-text-subtitle">{{ image.site }}</p>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
