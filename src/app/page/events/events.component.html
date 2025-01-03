@@ -1,1 +1,60 @@
-<p>events works!</p>
+<div class="events-header-container">
+  <div class="container events-header-content">
+    <div class="events-header-content-text">
+      <h1>Eventos</h1>
+      <p>Organização e participação em eventos exclusivos. Apresentamos a marca ao público certo.</p>
+    </div>
+  </div>
+</div>
+
+<div class="events-container">
+  <div class="container events-container-list">
+    <div class="events-container-list-infos">
+      <div class="events-container-list-text">
+        <div class="events-container-list-hotel-list">
+          <div class="container hotel-list">
+            <div class="hotel-item" *ngFor="let hotel of hotels">
+              <h3 class="hotel-name">{{ hotel.date }}</h3>
+              <p class="hotel-location">{{ hotel.location }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container events-container-gallery">
+    <div class="events-container-gallery-infos">
+      <div class="events-container-gallery-text">
+        <h1>Últimos eventos</h1>
+        <div class="events-container-gallery-button">
+          <i class="fa fa-arrow-left fa-1x" (click)="prev()"></i>
+          <i class="fa fa-arrow-right fa-1x" (click)="next()"></i>
+        </div>
+      </div>
+
+      <div class="container custom-carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <div class="carousel-row">
+              <div *ngFor="let item of visibleItems[0]">
+                <img [src]="item.picture" [alt]="item.title" width="100%" height="221px"/>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.describe }}</p>
+              </div>
+            </div>
+            <div class="carousel-row">
+              <div *ngFor="let item of visibleItems[1]">
+                <img [src]="item.picture" [alt]="item.title" width="100%" height="221px" />
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.describe }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

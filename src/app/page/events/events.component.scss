@@ -1,0 +1,115 @@
+::ng-deep .footer-container-header {
+  background-color: #f5f5f5;
+}
+
+.events-header-container{
+  background-color: #E0E7E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 76px;
+  padding-top: 75px;
+  height: 573px;
+
+  .events-header-content{
+    .events-header-content-text{
+      text-align: center;
+      gap: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
+.events-container{
+  background-color: #F3F5F6;
+  align-items: center;
+  padding-top: 100px;
+
+  .events-container-list {
+    .events-container-list-infos {
+      display: flex;
+      gap: 180px;
+      .events-container-list-text {
+        align-self: center;
+        gap: 48px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .events-container-list-hotel-list{
+          .hotel-list {
+            .hotel-item {
+              display: flex;
+              align-items: baseline;
+              gap: 63px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .events-container-gallery{
+    .events-container-gallery-infos {
+      .events-container-gallery-text {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 124px;
+        padding-bottom: 48px;
+
+        .events-container-gallery-button{
+          gap: 16px;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre as linhas */
+  width: 100%;
+}
+
+.carousel-row {
+  display: flex;
+  justify-content: space-between; /* Itens com espaçamento uniforme */
+  gap: 20px;
+}
+
+.carousel-item {
+  flex: 1 1 30%; /* Garante que cada item ocupa 1/3 da linha */
+  max-width: 30%; /* Limita o tamanho máximo de cada item */
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.item-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.nav-button{
+  border: none;
+  background-color: transparent;
+
+}
