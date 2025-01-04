@@ -1,15 +1,30 @@
 <div class="impress-header-container">
   <div class="container impress-header-container-text">
     <p class="impress-header-container-text-title">Imprensa</p>
-    <h1 class="impress-header-container-text-subtitle">O que a mídia fala sobre nós</h1>
+    <h1 class="impress-header-container-text-subtitle">Quem conta sobre as marcas de nosso Portfólio?</h1>
   </div>
 
   <div class="container impress-header-container-cards">
-    <div class="impress-header-container-card" *ngFor="let image of images">
-      <img [src]="image.src" [alt]="image.title" />
+    <div class="impress-header-container-card" *ngFor="let imprenss of imprensses" (click)="openLink(imprenss.link)">
+      <img [src]="imprenss.src" [alt]="imprenss.title" />
       <div class="impress-header-container-card-text">
-        <h1 class="text-ellipsis impress-header-container-card-text-title">{{ image.title }}</h1>
-        <p class="text-ellipsis impress-header-container-card-text-subtitle">{{ image.site }}</p>
+        <h1 class="text-ellipsis impress-header-container-card-text-title">{{ imprenss.title }}</h1>
+        <p class="text-ellipsis impress-header-container-card-text-subtitle">{{ imprenss.site }}</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="container divider"/>
+
+  <div class="container impress-container">
+    <span class="container carousel-title">Influenciadores</span>
+    <div class="container impress-header-container-cards">
+      <div class="impress-header-container-card" *ngFor="let influencer of influencers" (click)="openLink(influencer.link)">
+        <img [src]="influencer.src" [alt]="influencer.name" />
+        <div class="impress-header-container-card-text">
+          <h1 class="text-ellipsis impress-header-container-card-text-title">{{ influencer.name }}</h1>
+          <p class="text-ellipsis impress-header-container-card-text-subtitle">{{ influencer.site }}</p>
+        </div>
       </div>
     </div>
   </div>

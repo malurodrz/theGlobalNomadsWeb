@@ -14,61 +14,32 @@ export interface Event {
   styleUrls: ['./events.component.scss', '../../component/home-list/home-list.component.scss']
 })
 export class EventsComponent implements OnInit {
-  hotels = [
-    { date: '15/12', location: 'Inspire Luxury Hospitality Conference' },
-    { date: '05/03', location: 'ILTM Latin America' },
-    { date: '02/04', location: 'Expotel' },
-    { date: '02/04', location: 'Ilhas Baleares, Espanha' },
-    { date: '05/05', location: 'Top Hotel Praha' },
-  ];
-
-  @Input() events: Event[] = [
-    {
-      picture: 'assets/img/hotel.png',
-      title: '1',
-      describe: 'Atacama',
-    },
-    {
-      picture: 'assets/img/hotel.png',
-      title: '2',
-      describe: 'Atacama',
-    },
-    {
-      picture: 'assets/img/hotel.png',
-      title: '3',
-      describe: 'Atacama',
-    },
-    {
-      picture: 'assets/img/hotel.png',
-      title: '4',
-      describe: 'Atacama',
-    },
-    {
-      picture: 'assets/img/hotel.png',
-      title: '5',
-      describe: 'Atacama',
-    },
-    {
-      picture: 'assets/img/hotel.png',
-      title: '6',
-      describe: 'Atacama',
-    }
-  ];
+  eventsList = [
+    { date: '10/02/2025', location: 'Roadshow The Global Nomads - São Paulo' },
+    { date: '11/02/2025', location: 'Roadshow The Global Nomads - Goiânia' },
+    { date: '12/02/2025', location: 'Roadshow The Global Nomads - Curitiba' },
+    { date: '13/02/2025', location: 'Roadshow The Global Nomads - Rio de Janeiro' },
+    { date: '12/03/2025', location: 'Beyond Experiences - Embark Beyond (12 a 14 de Março)' },
+    { date: '04/05/2025', location: 'Trade Partners' },
+    { date: '05/05/2025', location: 'ILTM Latin America (05 a 08 de Maio)' }
+  ]
 
   items = [
-    { picture: 'assets/img/hotel.png', title: '1', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '2', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '3', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '4', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '5', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '6', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '7', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '8', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '9', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '10', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '11', describe: 'Conferência internacional de hoteis de luxo. ' },
-    { picture: 'assets/img/hotel.png', title: '12', describe: 'Conferência internacional de hoteis de luxo. ' },
-  ];
+    { picture: 'assets/img/hotel.png', title: 'Aniversário - Embark Beyond Brasil' },
+    { picture: 'assets/img/hotel.png', title: 'TTW Cruise Day' },
+    { picture: 'assets/img/hotel.png', title: 'SPFW São Paulo (Co-branding: Patricia Viera & Explora)' },
+    { picture: 'assets/img/hotel.png', title: 'Trade Partners - Teresa Perez' },
+    { picture: 'assets/img/hotel.png', title: 'ILTM Latin America 2024' },
+    { picture: 'assets/img/hotel.png', title: 'Cartier Loja Conceito (Co-branding: Cartier & SHA Wellness)' },
+    { picture: 'assets/img/hotel.png', title: 'CSI - W Longines São Paulo Horse Show - 33º Indoor (Sociedade Hípica Paulista) - Leilão Beneficente' },
+    { picture: 'assets/img/hotel.png', title: 'The Collection - Perfect Trip (Wedding Event)' },
+    { picture: 'assets/img/hotel.png', title: 'Africa Partners - Teresa Perez' },
+    { picture: 'assets/img/hotel.png', title: 'Outubro Rosa (Sociedade Hípica Paulista) - Evento Beneficente' },
+    { picture: 'assets/img/hotel.png', title: 'Rio de Janeiro' },
+    { picture: 'assets/img/hotel.png', title: 'Roadshow de Navegações - Kangaroo Tours' },
+    { picture: 'assets/img/hotel.png', title: 'IT Brands - Villaggio JK' },
+    { picture: 'assets/img/hotel.png', title: 'Celebração 100 Episódios CNN Viagem e Gastronomia' }
+  ]
 
   visibleItems: any[][] = [[], []]; // Armazena os itens visíveis para as duas linhas
   currentIndex: number = 0; // Índice atual do carousel
@@ -86,12 +57,9 @@ export class EventsComponent implements OnInit {
       currentItems.slice(0, 3), // Primeira linha
       currentItems.slice(3, 6)  // Segunda linha
     ];
-
-    console.log('Visible Items:', this.visibleItems); // Verifica os dados
   }
 
   next() {
-    console.log('Previous clicked');
     if (this.currentIndex < Math.ceil(this.items.length / 6) - 1) {
       this.currentIndex++;
       this.updateVisibleItems();
@@ -99,7 +67,6 @@ export class EventsComponent implements OnInit {
   }
 
   prev() {
-    console.log('Previous clicked2');
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.updateVisibleItems();

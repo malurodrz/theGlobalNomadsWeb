@@ -13,14 +13,18 @@
 
   .about-header-container{
     align-self: center;
-    display: flex;
-    gap: 137px;
+    //display: flex;
+    //gap: 137px;
 
     .about-header-container-text{
       display: flex;
       flex-direction: column;
       gap: 48px;
       align-self: center;
+    }
+    .about-header-container-images{
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -112,8 +116,8 @@
       }
 
       .base-content-container-text{
-        width: 375px;
-        transform: translate(520px, -80px);
+        width: 700px;
+        transform: translate(400px, -80px);
         p{
           font-size: 24px;
         }
