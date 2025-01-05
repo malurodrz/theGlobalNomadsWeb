@@ -39,6 +39,12 @@ p{
       display: flex;
       flex-direction: column;
       gap: 48px;
+      h1{
+        font-size: 64px;
+      }
+      p{
+        font-size: 24px;
+      }
     }
   }
 
@@ -67,9 +73,7 @@ p{
     .contact-content-container-text{
       display: flex;
       flex-direction: column;
-      h1 {
-        padding-bottom: 56px;
-      }
+      gap: 56px;
     }
 
     .contact-content-container-text-contact{
