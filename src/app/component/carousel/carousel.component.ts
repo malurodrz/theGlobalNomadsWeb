@@ -12,7 +12,7 @@ export interface Hotel {
   standalone: false,
 
   templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+  styleUrls: ['./carousel.component.scss', '../../page/events/events.component.scss']
 })
 export class CarouselComponent {
   @Input() hotels: Hotel[] = [];

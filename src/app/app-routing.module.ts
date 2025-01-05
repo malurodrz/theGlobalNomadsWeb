@@ -9,7 +9,7 @@ import {ClientComponent} from './page/client/client.component';
 import {EventComponent} from './page/event/event.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'pages/home', pathMatch: 'full' },
   { path: 'pages/home', component: HomeComponent },
   { path: 'pages/about', component: AboutComponent },
   { path: 'pages/events', component: EventsComponent },

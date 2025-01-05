@@ -13,8 +13,8 @@
 
   .about-header-container{
     align-self: center;
-    //display: flex;
-    //gap: 137px;
+    display: flex;
+    gap: 137px;
 
     .about-header-container-text{
       display: flex;
@@ -63,18 +63,20 @@
           cursor: pointer;
         }
 
-        .button-ig {
+        .button-ig, button-ig-a {
           border: 1px solid #0EAAA1;
-          color: #0EAAA1;
           text-align: center;
           font-family: "Neue Haas Grotesk Display Pro", serif;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
           line-height: 120%;
+          a {
+            color: #0EAAA1;
+          }
         }
 
-        .button-ln {
+        .button-ln, a {
           border: none;
           color: #0F0F0F;
         }
@@ -91,7 +93,7 @@
     gap: 150px;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 0;
+    padding-top: 100px;
 
     .propose-container-text{
       display: flex;
@@ -116,16 +118,27 @@
       }
 
       .base-content-container-text{
-        width: 700px;
-        transform: translate(400px, -80px);
-        p{
-          font-size: 24px;
-        }
+        width: 384px;
+        transform: translate(469px, -137px);
       }
     }
   }
 
+  .owner-container{
+    display: flex;
+    gap: 150px;
+    justify-content: space-between;
+    align-items: center;
+
+    .owner-container-text{
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+  }
+
   .time-container{
+    padding-bottom: 124px;
     .time-content-container{
       display: flex;
       flex-direction: column;
@@ -139,12 +152,14 @@
           flex-direction: column;
           gap: 16px;
           h1 {
-            font-size: 28px;
+            font-size: 24px;
             margin: 0;
           }
           p {
-            font-size: 24px;
             margin: 0;
+          }
+          img{
+            filter: grayscale(100%);
           }
         }
       }
