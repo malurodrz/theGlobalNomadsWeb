@@ -9,12 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HomeListComponent {
   hotels = [
-    { name: 'Explora Atacama', location: 'Atacama, Chile' },
-    { name: 'Explora Valle Sagrado', location: 'Cusco, Peru' },
-    { name: 'Explora Rapa Nui', location: 'Ilha de Páscoa, Chile' },
-    { name: 'Vestige Son Vell', location: 'Ilhas Baleares, Espanha' },
-    { name: 'Vestige Palacio de Figueras', location: 'Figueras, Espanha' },
-    { name: 'Vestige Miramar', location: 'Mallorca, Espanha' },
-    { name: 'Six Senses Zighy Bay', location: 'Zighy Bay, Omã' },
+    { id: 1, name: 'Explora Atacama', location: 'Atacama, Chile' },
+    { id: 2, name: 'Explora Valle Sagrado', location: 'Cusco, Peru' },
+    { id: 3, name: 'Explora Rapa Nui', location: 'Ilha de Páscoa, Chile' },
+    { id: 4, name: 'Vestige Son Vell', location: 'Ilhas Baleares, Espanha' },
+    { id: 5, name: 'Vestige Palacio de Figueras', location: 'Figueras, Espanha' },
+    { id: 6, name: 'Vestige Miramar', location: 'Mallorca, Espanha' },
+    { id: 7, name: 'Six Senses Zighy Bay', location: 'Zighy Bay, Omã' },
   ];
 }

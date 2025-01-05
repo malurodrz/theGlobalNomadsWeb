@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'pages/events', component: EventsComponent },
   { path: 'pages/impress', component: ImpressComponent },
   { path: 'pages/contact', component: ContactComponent },
-  { path: 'pages/client', component: ClientComponent},
-  { path: 'pages/event', component: EventComponent},
+  { path: 'pages/client/:id', component: ClientComponent},
+  { path: 'pages/event/:id', component: EventComponent},
 ];
 
 @NgModule({
