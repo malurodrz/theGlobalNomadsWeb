@@ -1,6 +1,14 @@
 ::ng-deep .footer-container-header {
   background-color: #f5f5f5;
 }
+
+::ng-deep .vertical-line{
+  background: linear-gradient(to bottom, white 16%, black 16%);
+}
+
+::ng-deep .fa-bars{
+  color: white
+}
 .button-ig{
   background-color: transparent;
   display: flex;
