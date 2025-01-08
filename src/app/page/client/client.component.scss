@@ -6,6 +6,10 @@
   background: linear-gradient(to bottom, white 16%, black 16%);
 }
 
+.espaco-carousel{
+  padding-bottom: 100px;
+}
+
 ::ng-deep .fa-bars{
   color: white
 }
@@ -116,18 +120,18 @@
   background-color: #E0E7E6;
   align-items: center;
   padding-top: 75px;
+  padding-bottom: 75px;
   .client-description-container-content{
     .client-description-container-content-texts{
       display: flex;
       gap: 180px;
       .client-description-container-content-text{
-        gap: 48px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
 
         h1{
-          font-size: 48px;
+          font-size: 32px;
           font-family: "Albra Text TRIAL", serif;
         }
         p{
@@ -329,6 +333,35 @@ padding-top: 75px;
   }
 }
 
+.custom-carousel{
+  .carousel-container{
+    .carousel-slide{
+      .carousel-row{
+        h3{
+          font-family: 'Albra Text TRIAL', serif;
+          font-size: 32px;
+          font-weight: 300;
+          line-height: 38.4px;
+          letter-spacing: -0.02em;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          padding-top: 40px;
+        }
+        p{
+          font-family: 'Neue Haas Grotesk Display Pro', serif;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 28.8px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          padding-top: 24px;
+        }
+      }
+    }
+  }
+}
 
 
 

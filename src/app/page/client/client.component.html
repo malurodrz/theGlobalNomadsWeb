@@ -1,4 +1,4 @@
-<div class="header-container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/event/header.jpeg')">
+<div class="header-container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{headerBackground}})">
   <div class="container header-content-container">
     <div class="header-content-container-texts">
       <div class="header-content-container-texts-title">
@@ -40,15 +40,10 @@
         <div class="carousel-container">
           <div class="carousel-slide">
             <div class="carousel-row">
-              <div class="col-4" *ngFor="let item of visibleItems[0]" [routerLink]="['/pages/event', item.id]">
-                <img [src]="item.picture" [alt]="item.title" width="100%" height="221px"/>
-                <h3>{{ item.title }}</h3>
-              </div>
-            </div>
-            <div class="carousel-row">
-              <div class="col-4" *ngFor="let item of visibleItems[1]">
-                <img [src]="item.picture" [alt]="item.title" width="100%" height="221px" />
-                <h3>{{ item.title }}</h3>
+              <div class="col-4" *ngFor="let item of visibleItems[0]">
+                <img [src]="item.picture" [alt]="item.name" width="100%" height="221px"/>
+                <h3>{{ item.name }}</h3>
+                <p>{{item.description}}</p>
               </div>
             </div>
           </div>
@@ -58,7 +53,7 @@
   </div>
 </div>
 
-<div class="client-carousel-container">
+<div class="client-carousel-container espaco-carousel">
   <div class="container client-container-gallery">
     <div class="client-container-gallery-infos">
       <div class="client-container-gallery-text">
@@ -73,15 +68,11 @@
         <div class="carousel-container">
           <div class="carousel-slide">
             <div class="carousel-row">
-              <div class="col-4" *ngFor="let item of visibleItems[0]" [routerLink]="['/pages/event', item.id]">
+              <div class="col-4" *ngFor="let item of visibleItems[0]">
                 <img [src]="item.picture" [alt]="item.title" width="100%" height="221px"/>
                 <h3>{{ item.title }}</h3>
-              </div>
-            </div>
-            <div class="carousel-row">
-              <div class="col-4" *ngFor="let item of visibleItems[1]">
-                <img [src]="item.picture" [alt]="item.title" width="100%" height="221px" />
-                <h3>{{ item.title }}</h3>
+                <h3>{{ item.name }}</h3>
+                <p>{{item.description}}</p>
               </div>
             </div>
           </div>
@@ -96,14 +87,14 @@
   <div class="container client-description-container-content">
     <div class="client-description-container-content-texts">
       <div class="client-description-container-content-text">
-        <h1>{{ conceitoCurtoDoHotel }}</h1>
+        <h1>{{ phasehotel }}</h1>
         <div style="display: flex; justify-content: flex-start; gap: 16px;">
           <a href="{{hotelLink}}"><button class="button-ig">VISITAR SITE OFICIAL</button></a>
           <a href="{{linkIgHotel}}"><button class="button-ln">INSTAGRAM</button></a>
         </div>
       </div>
       <div class="client-description-container-content-image">
-        <img ngSrc="{{hotelImage}}" alt="" height="498" width="433">
+        <img ngSrc="{{primeImgHotel}}" alt="" height="371" width="326">
       </div>
     </div>
   </div>
