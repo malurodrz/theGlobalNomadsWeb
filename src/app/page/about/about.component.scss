@@ -147,6 +147,7 @@
       .time-content-container-images{
         display: flex;
         gap: 16px;
+        justify-content: space-between;
         .time-content-container-card{
           display: flex;
           flex-direction: column;
