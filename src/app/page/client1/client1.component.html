@@ -1,0 +1,101 @@
+<div class="header-container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{headerBackground}})">
+  <div class="container header-content-container">
+    <div class="header-content-container-texts">
+      <div class="header-content-container-texts-title">
+        <img ngSrc="{{logoRede}}" alt="" width="201" height="141">
+        <h1>{{ hotelName }}</h1>
+        <p>{{ locale}}, {{country}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="client-info-container">
+  <div class="container client-info-container-content">
+    <div class="client-info-container-content-texts">
+      <div class="client-info-container-content-text">
+        <h1>{{ conceitoCurtoDoHotel }}</h1>
+        <p>{{ hotelDescription }}</p>
+        <a href="{{hotelLink}}"><button class="button-ig">VISITAR SITE OFICIAL</button></a>
+      </div>
+      <div class="client-info-container-content-image">
+        <img ngSrc="{{hotelImage}}" alt="" height="498" width="433">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="client-carousel-container espaco-carousel">
+  <div class="container client-container-gallery">
+    <div class="client-container-gallery-infos">
+      <div class="client-container-gallery-text">
+        <h1>{{carrousel1Title}}</h1>
+        <div class="client-container-gallery-button">
+          <i class="fa fa-arrow-left fa-1x" (click)="prev()"></i>
+          <i class="fa fa-arrow-right fa-1x" (click)="next()"></i>
+        </div>
+      </div>
+
+      <div class="container custom-carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <div class="carousel-row">
+              <div class="col-4" *ngFor="let item of visibleItems[0]">
+                <img [src]="item.picture" [alt]="item.name" width="100%" height="221px"/>
+                <h3>{{ item.name }}</h3>
+                <p>{{item.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="client-description-container">
+  <div class="container client-description-container-content">
+    <div class="client-description-container-content-texts">
+      <div class="client-description-container-content-text">
+        <h1>{{ phasehotel }}</h1>
+        <div style="display: flex; justify-content: flex-start; gap: 16px;">
+          <a href="{{hotelLink}}"><button class="button-ig">VISITAR SITE OFICIAL</button></a>
+          <a href="{{linkIgHotel}}"><button class="button-ln">INSTAGRAM</button></a>
+        </div>
+      </div>
+      <div class="client-description-container-content-image">
+        <img ngSrc="{{primeImgHotel}}" alt="" height="371" width="326">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="gallery-container">
+  <div class="container gallery-container-content">
+    <div class="gallery-container-content-title">
+      <h1>Galeria</h1>
+    </div>
+    <div class="gallery-container-content-infos">
+      <div class="gallery-container-content-images">
+        <div class="gallery-container-content-images-grid" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex; width: 100%">
+          <div class="gallery-container-content-images-line" style="justify-content: flex-start; align-items: center; gap: 17px; display: inline-flex; width: 100%">
+            <img class="small-image" ngSrc="assets/img/about/01.png" alt="" height="416" width="772"/>
+            <img class="big-image" ngSrc="assets/img/about/02.png" alt="" height="625" width="1028"/>
+          </div>
+          <div class="gallery-container-content-images-line" style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 17px; display: inline-flex; width: 100%">
+            <img class="big-image" ngSrc="assets/img/about/03.png" height="1072" width="1072" alt=""/>
+            <img class="small-image" ngSrc="assets/img/about/04.png" height="600" width="1200" alt=""/>
+          </div>
+          <div class="gallery-container-content-images-line" style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 17px; display: inline-flex; width: 100%">
+            <img class="medium-image" ngSrc="assets/img/about/05.png" height="1280" width="1920" alt=""/>
+            <img class="medium-image" ngSrc="assets/img/about/06.png" height="418" width="700" alt=""/>
+            <img class="medium-image" ngSrc="assets/img/about/07.png" height="525" width="700" alt=""/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

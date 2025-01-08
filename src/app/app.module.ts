@@ -23,6 +23,7 @@ import {ButtonModule} from 'primeng/button';
 import {Carousel} from 'primeng/carousel';
 import {Tag} from 'primeng/tag';
 import { CarouselComponent } from './component/carousel/carousel.component';
+import {Client1Component} from './page/client1/client1.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CarouselComponent } from './component/carousel/carousel.component';
     EventComponent,
     FooterComponent,
     HeaderComponent,
-    CarouselComponent
+    CarouselComponent,
+    Client1Component
   ],
   imports: [
     BrowserModule,

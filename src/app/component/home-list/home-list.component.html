@@ -1,5 +1,5 @@
 <div class="container hotel-list">
-  <div class="hotel-item" *ngFor="let hotel of hotels" [routerLink]="['/pages/client', hotel.id]">
+  <div class="hotel-item" *ngFor="let hotel of hotels" [routerLink]="[hotel.href, hotel.id]">
     <h3 class="hotel-name">{{ hotel.name }}</h3>
     <p class="hotel-location">{{ hotel.location }}</p>
   </div>
