@@ -53,6 +53,13 @@ export class HomeGalleryComponent {
       name: 'Explora Atacama',
       city: 'Belo Horizonte',
       country: 'Minas Gerais',
+    },
+    {
+      id: 5,
+      picture: 'assets/img/hotel.png',
+      name: 'Explora Atacama1',
+      city: 'Belo Horizonte',
+      country: 'Minas Gerais',
     }
   ];
 }
