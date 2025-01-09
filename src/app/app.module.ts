@@ -24,6 +24,7 @@ import {Carousel} from 'primeng/carousel';
 import {Tag} from 'primeng/tag';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import {Client1Component} from './page/client1/client1.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import {Client1Component} from './page/client1/client1.component';
     FooterComponent,
     HeaderComponent,
     CarouselComponent,
-    Client1Component
+    Client1Component,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,8 @@ import {Client1Component} from './page/client1/client1.component';
     NgOptimizedImage,
     ButtonModule,
     Carousel,
-    Tag
+    Tag,
+    BrowserAnimationsModule,
   ],
   providers: [
     provideAnimationsAsync(),

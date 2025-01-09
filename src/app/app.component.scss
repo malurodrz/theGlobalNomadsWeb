@@ -42,3 +42,67 @@
     }
   }
 }
+
+
+//Menu
+li{
+
+  font-family: "Albra Text TRIAL", serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -0.96px;
+  cursor: pointer;
+
+  a{
+    color: #0F0F0F;
+  }
+
+  &:hover{
+    text-decoration: underline black;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+
+}
+
+p{
+  color: #919191;
+  font-family: "Neue Haas Grotesk Display Pro", serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+spam{
+  color: #1E1E1E;
+  text-align: center;
+  font-family: "Neue Haas Grotesk Display Pro", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+
+.control {
+  display: flex;
+  flex-direction: row !important;
+  gap: 36px!important;
+  padding-top: 80px!important;
+  padding-right: 104px;
+
+  .vertical-line{
+    background-color: black;
+    height: 80vh;
+    width: 1px;
+  }
+}

@@ -2,14 +2,6 @@
   background-color: #f5f5f5;
 }
 
-::ng-deep .vertical-line{
-  background: linear-gradient(to bottom, white 16%, black 16%);
-}
-
-::ng-deep .fa-bars{
-  color: white
-}
-
 .header-container{
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/event/header.jpeg');
   background-repeat: no-repeat;

@@ -1,13 +1,15 @@
-<div class="container-app" *ngIf="!open">
-  <div class="conteudo">
+<div class="container-app">
+  <div class="conteudo" *ngIf="open" [@menuAnimation] [@contentAnimation]>
     <router-outlet></router-outlet>
+  </div>
+  <div class="conteudo-menu" *ngIf="!open" [@menuAnimation] [@contentAnimation]>
+    <app-menu (close)="closeMenu()"></app-menu>
   </div>
   <div class="nav-menu">
     <div class="flex-column control">
-      <i class="fa fa-bars fa-2x" (click)="openMenu()"></i>
+      <i class="fa fa-bars fa-2x" (click)="openMenu()" *ngIf="open"></i>
+      <i class="fas fa-close fa-2x" (click)="closeMenu()" *ngIf="!open"></i>
       <div class="vertical-line"></div>
     </div>
   </div>
 </div>
-
-<app-menu *ngIf="open" (close)="closeMenu()"></app-menu>
