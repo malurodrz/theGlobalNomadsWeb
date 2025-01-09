@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {Router} from '@angular/router';
+import {AfterViewInit, Component, Renderer2} from '@angular/core';
+import {NavigationEnd, Router} from '@angular/router';
 import {
   trigger,
   state,
@@ -7,6 +7,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -48,23 +49,45 @@ import {
 })
 export class AppComponent {
   title = 'The Global Nomads';
+  protected open: boolean = false;
+  public isClientPage: string = '';
+  private routerSubscription: Subscription;
 
-  constructor(private router: Router) {}
 
-  protected open: boolean = true;
-
-  openMenu() {
-    this.open = false;
-  }
-
-  closeMenu() {
-    this.open = true; // Fecha o modal
-  }
-
-  navigateAndClose(url: string) {
-    this.router.navigate([url]).then(() => {
-      this.closeMenu()
+  constructor(private router: Router) {
+    this.routerSubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.updatePageColor();
+      }
     });
   }
 
+  private updatePageColor() {
+    if (this.router.url.includes('client1') && !this.open) {
+      this.isClientPage = 'vertical-client1';
+    } else if (this.router.url.includes('client') && !this.open) {
+      this.isClientPage = 'vertical-client';
+    } else if (this.router.url.includes('event/') && !this.open) {
+      this.isClientPage = 'vertical-event';
+    } else {
+      this.isClientPage = 'vertical-line';
+    }
+  }
+
+  openMenu() {
+    this.open = true;
+    this.isClientPage = 'vertical-line';
+  }
+
+  closeMenu() {
+    this.open = false; // Fecha o modal
+    this.updatePageColor();
+  }
+
+  ngOnDestroy() {
+    // Garante que a inscrição no evento de rota seja limpa ao destruir o componente
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
+  }
 }
