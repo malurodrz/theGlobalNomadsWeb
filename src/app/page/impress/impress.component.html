@@ -1,29 +1,72 @@
 <div class="impress-header-container">
   <div class="container impress-header-container-text">
-    <p class="impress-header-container-text-title">Imprensa</p>
-    <h1 class="impress-header-container-text-subtitle">Quem conta sobre as marcas de nosso Portfólio?</h1>
+    <p class="impress-header-container-text-title"><img src="assets/img/logoAzul.svg" alt="" width="84" height="48"></p>
+    <h1 class="impress-header-container-text-subtitle">O que a mídia fala sobre nós</h1>
   </div>
 
-  <div class="container impress-header-container-cards">
-    <div class="impress-header-container-card" *ngFor="let imprenss of imprensses" (click)="openLink(imprenss.link)">
-      <img [src]="imprenss.src" [alt]="imprenss.title" />
-      <div class="impress-header-container-card-text">
-        <h1 class="text-ellipsis impress-header-container-card-text-title">{{ imprenss.title }}</h1>
-        <p class="text-ellipsis impress-header-container-card-text-subtitle">{{ imprenss.site }}</p>
+  <div class="events-container">
+    <div class="container events-container-gallery">
+      <div class="events-container-gallery-infos">
+        <div class="events-container-gallery-text" style="padding-top: 0">
+          <h1>Imprensa</h1>
+          <div class="events-container-gallery-button">
+            <i class="fa fa-arrow-left fa-1x" (click)="prev()"></i>
+            <i class="fa fa-arrow-right fa-1x" (click)="next()"></i>
+          </div>
+        </div>
+
+        <div class="container custom-carousel" style="padding: 0">
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <div class="carousel-row" >
+                <div class="col-4" *ngFor="let item of visibleItems[0]" [routerLink]="['/pages/event', item.id]" style="padding: 0">
+                  <img [src]="item.picture" [alt]="item.title" width="100%" height="221px"/>
+                  <h3>{{ item.title }}</h3>
+                </div>
+              </div>
+              <div class="carousel-row">
+                <div class="col-4" *ngFor="let item of visibleItems[1]" style="padding: 0">
+                  <img [src]="item.picture" [alt]="item.title" width="100%" height="221px" />
+                  <h3>{{ item.title }}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <hr class="container divider"/>
 
-  <div class="container impress-container">
-    <span class="container carousel-title">Influenciadores</span>
-    <div class="container impress-header-container-cards">
-      <div class="impress-header-container-card" *ngFor="let influencer of influencers" (click)="openLink(influencer.link)">
-        <img [src]="influencer.src" [alt]="influencer.name" />
-        <div class="impress-header-container-card-text">
-          <h1 class="text-ellipsis impress-header-container-card-text-title">{{ influencer.name }}</h1>
-          <p class="text-ellipsis impress-header-container-card-text-subtitle">{{ influencer.site }}</p>
+  <div class="events-container">
+    <div class="container events-container-gallery">
+      <div class="events-container-gallery-infos">
+        <div class="events-container-gallery-text" style="padding-top: 0">
+          <h1>Influenciadores</h1>
+          <div class="events-container-gallery-button">
+            <i class="fa fa-arrow-left fa-1x" (click)="prev()"></i>
+            <i class="fa fa-arrow-right fa-1x" (click)="next()"></i>
+          </div>
+        </div>
+
+        <div class="container custom-carousel" style="padding: 0">
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <div class="carousel-row" >
+                <div class="col-4" *ngFor="let item of visibleItems[0]" [routerLink]="['/pages/event', item.id]" style="padding: 0">
+                  <img [src]="item.picture" [alt]="item.title" width="100%" height="221px"/>
+                  <h3>{{ item.title }}</h3>
+                </div>
+              </div>
+              <div class="carousel-row">
+                <div class="col-4" *ngFor="let item of visibleItems[1]" style="padding: 0">
+                  <img [src]="item.picture" [alt]="item.title" width="100%" height="221px" />
+                  <h3>{{ item.title }}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

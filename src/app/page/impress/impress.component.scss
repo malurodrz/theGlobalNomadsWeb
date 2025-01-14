@@ -24,7 +24,7 @@
   .impress-header-container-text{
     text-align: center;
     padding-top: 148px;
-    padding-bottom: 132px;
+    padding-bottom: 64px;
 
     .impress-header-container-text-title{
       p{
@@ -51,6 +51,11 @@
         letter-spacing: -1.28px;
       }
     }
+  }
+
+  .events-container{
+    background-color: #f5f5f5;
+    padding-top: 64px;
   }
 
   .impress-header-container-cards{

@@ -5,34 +5,67 @@ import { Component } from '@angular/core';
   standalone: false,
 
   templateUrl: './impress.component.html',
-  styleUrls: ['./impress.component.scss', '../../component/header/header.component.scss'],
+  styleUrls: ['./impress.component.scss', '../../component/header/header.component.scss', '../../page/events/events.component.scss', '../../component/home-list/home-list.component.scss'],
 })
 export class ImpressComponent {
-  imprensses = [
-    { src: 'assets/img/hotel.png', alt: 'Image 1', title: 'CNN Viagem e Gastronomia - Fevereiro 2022', site: 'Wilderness Ruanda', link: 'https://www.youtube.com/watch?v=RQ1FJEG1Kpg' },
-    { src: 'assets/img/hotel.png', alt: 'Image 3', title: 'CNN Viagem e Gastronomia - Julho 2022', site: 'Quark Expeditions - Ártico', link: 'https://www.youtube.com/watch?v=_K9NploaJ7g' },
-    { src: 'assets/img/hotel.png', alt: 'Image 5', title: 'Unquiet - Setembro 2023', site: 'Travessia Explora Atacama-Uyuni', link: 'https://drive.google.com/file/d/1SweAMuOJYQEVtQQYUhvogAQ7r8lvlJkK/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 6', title: 'Forbes - Novembro 2023', site: 'Wilderness Botsuana', link: 'https://drive.google.com/file/d/1PmWJSpXCjJVm8aC-8cidv6Z44jafkr07/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 7', title: 'Harper’s Bazaar - Novembro 2023', site: 'Six Senses Douro Valley', link: 'https://drive.google.com/file/d/18GOAEBGxEVbw5s3od-E2NTUw-yHVsN1C/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 8', title: 'Unquiet - Novembro 2023', site: 'Explora Parque Nacional Patagonia', link: 'https://drive.google.com/file/d/14MERowwmWJ3jb_o9RKhFiEbGrK_fgdA-/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 9', title: 'Forbes - Novembro 2023', site: 'Six Senses Douro Valley', link: 'https://drive.google.com/file/d/1Gk5F8-Jkq67whPMec8gKAFxWZ-Urjj81/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 10', title: 'Top Destinos - Dezembro 2023', site: 'Six Senses Kanuhura, Maldivas', link: 'https://drive.google.com/file/d/1cdVo9TEPEATloZGze3Ob3Be9zJRqq0L2/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 11', title: 'Unquiet Magazine - Setembro 2024', site: 'Entrevista - CEO Wilderness', link: 'https://drive.google.com/file/d/1tsmOYmQ1HtK97Eh5bEVs8krLO5nUjuxf/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 12', title: 'Folha de São Paulo - Outubro 2024', site: 'Quark Expeditions - Antártica', link: 'https://drive.google.com/file/d/13GXRIV3TL9ZGTeOLiQsU_M0-Pt7q79N-/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 13', title: 'Folha de São Paulo - Outubro 2024', site: 'Quark Expeditions - Antártica', link: 'https://drive.google.com/file/d/13Kn_Ffjz8IG81GxVtgin7kZMmvHTyJmf/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 14', title: 'Cidade Jardim Magazine - Novembro 2024', site: 'Wilderness Botswana', link: 'https://drive.google.com/file/d/1IPyJK5otYX0PJfy-mWoZ4zkMED9O12bX/view?usp=sharing' },
-    { src: 'assets/img/hotel.png', alt: 'Image 15', title: 'Top Destinos - Novembro 2024', site: 'SHA Mexico', link: 'https://drive.google.com/file/d/1ceidFCDwJvG5wE2THYXFPnt6RNPAGLFo/view?usp=sharing' }
-  ];
+  eventsList = [
+    { id: 1, date: '10/02/2025', location: 'Roadshow The Global Nomads - São Paulo' },
+    { id: 2, date: '11/02/2025', location: 'Roadshow The Global Nomads - Goiânia' },
+    { id: 3, date: '12/02/2025', location: 'Roadshow The Global Nomads - Curitiba' },
+    { id: 4, date: '13/02/2025', location: 'Roadshow The Global Nomads - Rio de Janeiro' },
+    { id: 5, date: '12/03/2025', location: 'Beyond Experiences - Embark Beyond (12 a 14 de Março)' },
+    { id: 6, date: '04/05/2025', location: 'Trade Partners' },
+    { id: 7, date: '05/05/2025', location: 'ILTM Latin America (05 a 08 de Maio)' }
+  ]
 
-  influencers = [
-    { src: 'assets/img/hotel.png', alt: 'Image 1', name: 'Camilla Guebur - Novembro 2022', site: 'Wilderness Namíbia', link: 'https://www.instagram.com/p/ClbM-UkP04B/' },
-    { src: 'assets/img/hotel.png', alt: 'Image 2', name: 'Fabio Porchat - Fevereiro 2023', site: 'Wilderness Zimbabue', link: 'https://www.instagram.com/p/Co76wx-thXg/?img_index=1' },
-    { src: 'assets/img/hotel.png', alt: 'Image 3', name: 'Bruno Gagliasso - Agosto 2023', site: 'Vestige Son Vell', link: 'https://www.instagram.com/p/Cv2tFaDoblJ/?img_index=4' },
-    { src: 'assets/img/hotel.png', alt: 'Image 4', name: 'Luciana Tranchesi - Fevereiro 2024', site: 'Wilderness Botsuana', link: 'https://www.instagram.com/reel/C3dvQ6CvL2Q/?igsh=MXd5aHNtcDNtZ3gzOA==' },
-    { src: 'assets/img/hotel.png', alt: 'Image 5', name: 'Marcella Tranchesi - Fevereiro 2024', site: 'Six Senses Kanuhura', link: 'https://www.instagram.com/reel/C3phDlCulkG/?igsh=bGgyNzltdGFvdHk2' },
-    { src: 'assets/img/hotel.png', alt: 'Image 6', name: 'Marcella Tranchesi - Fevereiro 2024', site: 'Six Senses Zighy Bay', link: 'https://www.instagram.com/p/C3k0Ppwrbu4/?igsh=MXhkdzkzN25hc212Zg==' },
-    { src: 'assets/img/hotel.png', alt: 'Image 7', name: 'Camilla Guebur - Novembro 2024', site: 'Wilderness Tanzania', link: 'https://www.instagram.com/p/DCXafzfs6Ns/' }
-  ];
+  items = [
+    { id: 1,picture: 'assets/img/hotel.png', title: 'Aniversário - Embark Beyond Brasil' },
+    { id: 2,picture: 'assets/img/hotel.png', title: 'TTW Cruise Day' },
+    { id: 3,picture: 'assets/img/hotel.png', title: 'SPFW São Paulo (Co-branding: Patricia Viera & Explora)' },
+    { id: 4,picture: 'assets/img/hotel.png', title: 'Trade Partners - Teresa Perez' },
+    { id: 5,picture: 'assets/img/hotel.png', title: 'ILTM Latin America 2024' },
+    { id: 6,picture: 'assets/img/hotel.png', title: 'Cartier Loja Conceito (Co-branding: Cartier & SHA Wellness)' },
+    { id: 7,picture: 'assets/img/hotel.png', title: 'CSI - W Longines São Paulo Horse Show - 33º Indoor (Sociedade Hípica Paulista) - Leilão Beneficente' },
+    { id: 8,picture: 'assets/img/hotel.png', title: 'The Collection - Perfect Trip (Wedding Event)' },
+    { id: 9,picture: 'assets/img/hotel.png', title: 'Africa Partners - Teresa Perez' },
+    { id: 10,picture: 'assets/img/hotel.png', title: 'Outubro Rosa (Sociedade Hípica Paulista) - Evento Beneficente' },
+    { id: 11,picture: 'assets/img/hotel.png', title: 'Rio de Janeiro' },
+    { id: 12,picture: 'assets/img/hotel.png', title: 'Roadshow de Navegações - Kangaroo Tours' },
+    { id: 13,picture: 'assets/img/hotel.png', title: 'IT Brands - Villaggio JK' },
+    { id: 14,picture: 'assets/img/hotel.png', title: 'Celebração 100 Episódios CNN Viagem e Gastronomia' }
+  ]
+
+  visibleItems: any[][] = [[], []]; // Armazena os itens visíveis para as duas linhas
+  currentIndex: number = 0; // Índice atual do carousel
+
+  ngOnInit() {
+    this.updateVisibleItems();
+  }
+
+  updateVisibleItems() {
+    const start = this.currentIndex * 6; // 6 itens por página
+    const currentItems = this.items.slice(start, start + 6); // Pega os itens visíveis
+
+    // Divide os itens em duas linhas
+    this.visibleItems = [
+      currentItems.slice(0, 3), // Primeira linha
+      currentItems.slice(3, 6)  // Segunda linha
+    ];
+  }
+
+  next() {
+    if (this.currentIndex < Math.ceil(this.items.length / 6) - 1) {
+      this.currentIndex++;
+      this.updateVisibleItems();
+    }
+  }
+
+  prev() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.updateVisibleItems();
+    }
+  }
 
 
   openLink(url: string) {
