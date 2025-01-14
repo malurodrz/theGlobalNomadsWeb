@@ -67,9 +67,13 @@ p{
 .contact-container{
   background-color: #E0E7E6;
 
+
   .contact-content-container{
     padding-top: 100px;
     padding-bottom: 101px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
     .contact-content-container-text{
       display: flex;
       flex-direction: column;
