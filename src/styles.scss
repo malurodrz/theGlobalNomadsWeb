@@ -30,4 +30,12 @@ a:hover{
   height: auto;
 }
 
+.limit-text {
+  display: -webkit-box;        /* Define o contêiner flexível */
+  -webkit-box-orient: vertical; /* Orienta o conteúdo no eixo vertical */
+  overflow: hidden;            /* Oculta o excesso de texto */
+  text-overflow: ellipsis;     /* Adiciona "..." no final do texto */
+  -webkit-line-clamp: 2;       /* Limita o texto a 2 linhas */
+}
+
 /* You can add global styles to this file, and also import other style files */
