@@ -9,6 +9,7 @@ import VectorSource from 'ol/source/Vector';
 import {Feature, Overlay} from 'ol';
 import {Fill, Icon, Stroke, Style, Text} from 'ol/style';
 import {Point} from 'ol/geom';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-map',
@@ -18,11 +19,13 @@ import {Point} from 'ol/geom';
   styleUrl: './home-map.component.scss'
 })
 export class HomeMapComponent implements OnInit {
+  constructor(private router: Router) {}
   @ViewChild('mapContainer', { static: true }) mapContainer!: ElementRef;
   @ViewChild('tooltipRef', { static: true }) tooltipRef!: ElementRef;
 
   map!: Map;
   tooltipOverlay!: Overlay;
+
 
   ngOnInit(): void {
     this.initMap();
@@ -30,16 +33,17 @@ export class HomeMapComponent implements OnInit {
 
   initMap(): void {
     const locations = [
-      { lon: 39.9208, lat: 32.8541, name: 'Ankara', city: 'Turquia', country: 'Espanha' },
-      { lon: 41.0082, lat: 28.9784, name: 'Istambul', city: 'Turquia', country: 'Espanha' },
-      { lon: 37.9838, lat: 23.7275, name: 'Atenas', city: 'Grécia', country: 'Espanha' },
-      { lon: 34.8544, lat: 39.3999, name: 'Beirute', city: 'Líbano', country: 'Espanha' },
-      { lon: 38.969, lat: 45.048, name: 'Baku', city: 'Azerbaijão', country: 'Espanha' },
+      {id: 1, lon: 39.9208, lat: 32.8541, name: 'Ankara', city: 'Turquia', country: 'Espanha' },
+      {id: 1, lon: 41.0082, lat: 28.9784, name: 'Istambul', city: 'Turquia', country: 'Espanha' },
+      {id: 1, lon: 37.9838, lat: 23.7275, name: 'Atenas', city: 'Grécia', country: 'Espanha' },
+      {id: 1, lon: 34.8544, lat: 39.3999, name: 'Beirute', city: 'Líbano', country: 'Espanha' },
+      {id: 1, lon: 38.969, lat: 45.048, name: 'Baku', city: 'Azerbaijão', country: 'Espanha' },
     ];
 
     const features = locations.map((loc) => {
       const feature = new Feature({
         geometry: new Point(fromLonLat([loc.lon, loc.lat])),
+        id: loc.id,
         name: loc.name,
         city: loc.city,
         country: loc.country,
@@ -91,6 +95,19 @@ export class HomeMapComponent implements OnInit {
       positioning: 'bottom-left',
     });
     this.map.addOverlay(this.tooltipOverlay);
+
+    // Evento de clique no ícone
+    this.map.on('click', (event) => {
+      console.log(event);
+      const feature = this.map.forEachFeatureAtPixel(event.pixel, (feat) => feat);
+
+      if (feature) {
+        const id = feature.get('id'); // Obtenha o ID do recurso
+        if (id) {
+          this.router.navigate(['/pages/client', id]); // Redireciona para a página do hotel
+        }
+      }
+    });
 
     // Adiciona evento para exibir o tooltip
     this.map.on('pointermove', (event) => {
