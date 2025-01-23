@@ -63,7 +63,7 @@ export class AppComponent {
   }
 
   private updatePageColor() {
-    if (this.router.url.includes('client1') && !this.open) {
+    if (this.router.url.includes('client') && !this.open) {
       this.isClientPage = 'vertical-client1';
     } else if (this.router.url.includes('client') && !this.open) {
       this.isClientPage = 'vertical-client';
