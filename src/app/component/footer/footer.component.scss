@@ -1,60 +1,76 @@
+// Variáveis globais para cores, fontes e espaçamentos
+$font-family: "Neue Haas Grotesk Display Pro", serif;
+$color-gray-dark: #919191;
+$color-gray-medium: #545454;
+$color-black: #1E1E1E;
+$color-white: #FFFFFF;
+
+$spacing-small: 12px;
+$spacing-medium: 24px;
+$spacing-large: 48px;
+$spacing-xlarge: 100px;
+
+// Estilo principal
 .footer-container-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 48px;
-  padding-top: 100px;
+  padding: 100px 0 $spacing-large;
+
   .container-header {
     display: flex;
-    text-align: center;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+
     .header-infos {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      gap: 24px;
+      gap: $spacing-medium;
+
       .header-infos-links {
         display: flex;
         gap: 100px;
         width: 384px;
         text-align: start;
-        h1{
+
+        h1 {
           margin: 0;
-          padding-bottom: 24px;
-          color: #919191;
-          font-family: "Neue Haas Grotesk Display Pro", serif;
+          padding-bottom: $spacing-medium;
+          color: $color-gray-dark;
+          font-family: $font-family;
           font-size: 16px;
-          font-style: normal;
           font-weight: 500;
-          line-height: 120%; /* 19.2px */
+          line-height: 120%;
         }
-        p{
+
+        p {
           margin: 0;
-          gap: 12px;
           display: flex;
+          gap: $spacing-small;
           align-items: baseline;
-          color: #545454;
-          font-family: "Neue Haas Grotesk Display Pro", serif;
+          color: $color-gray-medium;
+          font-family: $font-family;
           font-size: 24px;
-          font-style: normal;
           font-weight: 500;
-          line-height: 120%; /* 28.8px */
+          line-height: 120%;
           letter-spacing: -0.48px;
         }
       }
+
       .header-infos-virtuoso {
         width: 176px;
-        gap: 32px;
+        gap: $spacing-large;
         display: flex;
         flex-direction: column;
-        p{
-          color: #919191;
-          font-family: "Neue Haas Grotesk Display Pro", serif;
+
+        p {
+          color: $color-gray-dark;
+          font-family: $font-family;
           font-size: 14px;
-          font-style: normal;
           font-weight: 500;
-          line-height: 120%; /* 16.8px */
+          line-height: 120%;
           text-align: start;
         }
       }
@@ -62,30 +78,46 @@
   }
 }
 
-
 .footer-container-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 84px;
-  background-color: white;
+  background-color: $color-white;
 
   .container-footer {
     display: flex;
-    text-align: center;
     justify-content: space-between;
-    background-color: white;
     align-items: center;
+    text-align: center;
+    background-color: $color-white;
 
     p {
-      color: #1E1E1E;
-      text-align: center;
-      font-family: "Neue Haas Grotesk Display Pro", serif;
+      margin: 0;
+      color: $color-black;
+      font-family: $font-family;
       font-size: 16px;
-      font-style: normal;
       font-weight: 500;
       line-height: 120%;
-      margin: 0;
     }
   }
+}
+
+// Media queries para responsividade
+@media (max-width: 1024px) {
+  .header-infos {
+    justify-content: space-around !important;
+  }
+
+  .header-infos-links {
+    gap: $spacing-xlarge !important;
+  }
+
+  .container-footer {
+    justify-content: space-around !important;
+  }
+}
+
+@media (max-width: 768px) {
+  // Adicione estilos específicos para dispositivos menores, se necessário
 }
